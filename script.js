@@ -5,6 +5,11 @@ let removePriorGrid = () => {
     priorGrid.forEach(row => row.remove());
 }
 
+let shadeSquare = (e) => {
+    // console.log(e);
+    e.target.classList.add('hovered')
+}
+
 let createGrid = (v) => {
 
     removePriorGrid();
@@ -23,11 +28,22 @@ let createGrid = (v) => {
         }
         container.appendChild(row);
     }
+
+    let gridSquares = document.querySelectorAll('.grid-square');
+
+    gridSquares.forEach(gridSquare => gridSquare.addEventListener('mouseover', shadeSquare));
 };
 
 let newGrid = () => {
-    let size = prompt("Input the length of the side");
+    let size = parseInt(prompt("Input the length of the side"));
+    // console.log(size);
+    if (Number.isNaN(size)) return
+    while (!Number.isFinite(size)) {
+        size = parseInt(prompt("Please enter a valid side length"));
+    }
+    console.log('test');
     createGrid(size);
+    // console.log()
 }
 
 createGrid(4);

@@ -36,10 +36,7 @@ body {
 
 }
 
-.grid-square:hover {
+.hovered {
     background-color: darkgrey;
-}
-
-.grid-square:hover:visited {
-    background-color: darkgray;
+    /* transition: 0s; */
 }
