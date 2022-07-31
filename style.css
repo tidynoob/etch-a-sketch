@@ -28,6 +28,7 @@ body {
 
 .grid-square {
     flex: 1;
+    opacity: 0.0;
     /* text-align: center; */
     
     /* margin: auto; */
@@ -38,5 +39,6 @@ body {
 
 .hovered {
     background-color: darkgrey;
+    /* opacity: 0.0; */
     /* transition: 0s; */
 }
